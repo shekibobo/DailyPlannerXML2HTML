@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--
+		The daily planner will contain elements for each day of the week, from 
+		sunday to saturday.  Each day element contains two elements: one for a 
+		morning task, another for an afternoon task. 
+	-->
+	<xs:element name="dailyplanner">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="sunday" type="daytype" minOccurs="0" />
+				<xs:element name="monday" type="daytype" minOccurs="0" />
+				<xs:element name="tuesday" type="daytype" minOccurs="0" />
+				<xs:element name="wednesday" type="daytype" minOccurs="0" />
+				<xs:element name="thursday" type="daytype" minOccurs="0" />
+				<xs:element name="friday" type="daytype" minOccurs="0" />
+				<xs:element name="saturday" type="daytype" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="daytype">
+		<xs:sequence>
+			<xs:element name="am" type="timetype" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="pm" type="timetype" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		
+		<!-- 
+			Note: Attributes must follow element listings.
+		  Moving this above <xs:sequence> will break the code.
+		-->
+		<xs:attribute name="date" type="xs:date" />
+	</xs:complexType>
+	
+	<xs:complexType name="timetype">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="time" type="xs:time" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+</xs:schema>

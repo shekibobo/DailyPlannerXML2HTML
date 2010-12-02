@@ -1,0 +1,8 @@
+# Author: Joshua Kovach
+# Date 29 July 2010
+# Instructor: Dr. Robert Adams
+# Course: CIS 675 - Compiler Construction
+# Description:
+#  DOM/SAX parsers for an XML DailyPlanner document.  Converts the calendar and
+#  its activities to a formatted html table to be used with 'style.css'
+#

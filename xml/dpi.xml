@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+<?xml-stylesheet type='text/xsl' href='dailyplanner.xsl'?>
+<dailyplanner>
+	<sunday>
+		<am>Morning Task 1</am>
+		<pm>Afternoon Task 1</pm>
+	</sunday>
+	<monday>
+		<!-- testing for missing and double daytime elements -->
+		<am>Morning Task 2</am>
+		<am>Morning Task 2b</am>
+	</monday>
+<!-- testing for abscence of day elements 
+	<tuesday>
+		<am>Morning Task 3</am>
+		<pm>Afternoon Task 3</pm>
+	</tuesday> 
+-->
+	<!-- testing the "date" attribute -->
+	<wednesday date="2010-07-26">
+		<am time="09:00:00">Morning Task 4</am>
+		<pm>Afternoon Task 4</pm>
+	</wednesday>
+	<thursday>
+		<am>Morning Task 5</am>
+		<pm>Afternoon Task 5</pm>
+	</thursday>
+	<friday>
+		<am>Morning Task 6</am>
+		<pm>Afternoon Task 6</pm>
+	</friday>
+	<saturday>
+		<am>Morning Task 7</am>
+		<pm>Afternoon Task 7</pm>
+	</saturday>
+	<sunday>
+	</sunday>
+	<monday>
+		<pm>Afternoon Task 8</pm>
+	</monday>
+</dailyplanner>
